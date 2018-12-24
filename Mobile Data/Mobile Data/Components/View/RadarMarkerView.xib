@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="lvo-r0-bA1" customClass="RadarMarkerView" customModule="Mobile_Data" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAN-90-kfY">
+                    <rect key="frame" x="2.5" y="2.5" width="15" height="15"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FkB-3u-YVC">
+                            <rect key="frame" x="2" y="2" width="11" height="11"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOs-tq-pLr">
+                                    <rect key="frame" x="1" y="1" width="9" height="9"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="aOs-tq-pLr" secondAttribute="trailing" constant="1" id="FMe-Hr-g2O"/>
+                                <constraint firstAttribute="bottom" secondItem="aOs-tq-pLr" secondAttribute="bottom" constant="1" id="Gld-Fx-FQs"/>
+                                <constraint firstItem="aOs-tq-pLr" firstAttribute="leading" secondItem="FkB-3u-YVC" secondAttribute="leading" constant="1" id="VaJ-S1-wBc"/>
+                                <constraint firstItem="aOs-tq-pLr" firstAttribute="top" secondItem="FkB-3u-YVC" secondAttribute="top" constant="1" id="dfG-14-xi2"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="FkB-3u-YVC" secondAttribute="bottom" constant="2" id="0BE-LL-1D9"/>
+                        <constraint firstAttribute="height" constant="15" id="QOg-QD-v7F"/>
+                        <constraint firstItem="FkB-3u-YVC" firstAttribute="top" secondItem="BAN-90-kfY" secondAttribute="top" constant="2" id="TJF-ot-fFk"/>
+                        <constraint firstItem="FkB-3u-YVC" firstAttribute="leading" secondItem="BAN-90-kfY" secondAttribute="leading" constant="2" id="cKC-6L-ahm"/>
+                        <constraint firstAttribute="width" constant="15" id="qjp-Nl-j6L"/>
+                        <constraint firstAttribute="trailing" secondItem="FkB-3u-YVC" secondAttribute="trailing" constant="2" id="wwu-Ae-Lta"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BAN-90-kfY" firstAttribute="centerX" secondItem="lvo-r0-bA1" secondAttribute="centerX" id="2dt-Ba-O4h"/>
+                <constraint firstItem="BAN-90-kfY" firstAttribute="centerY" secondItem="lvo-r0-bA1" secondAttribute="centerY" id="bci-LZ-HqH"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="0Bw-Pw-yVS"/>
+            <connections>
+                <outlet property="ringOne" destination="BAN-90-kfY" id="AEF-IW-pTv"/>
+                <outlet property="ringOneOrginYConstraint" destination="bci-LZ-HqH" id="xsW-bg-OeW"/>
+                <outlet property="ringThree" destination="aOs-tq-pLr" id="vDJ-0n-ZmZ"/>
+                <outlet property="ringTwo" destination="FkB-3u-YVC" id="TWh-wr-Onp"/>
+            </connections>
+            <point key="canvasLocation" x="-292" y="8"/>
+        </view>
+    </objects>
+</document>

@@ -21,11 +21,6 @@
 		39BC378521D1191E007BF6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BC378321D1191E007BF6CA /* LaunchScreen.storyboard */; };
 		39BC379021D1191F007BF6CA /* Mobile_DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC378F21D1191F007BF6CA /* Mobile_DataTests.swift */; };
 		39BC379B21D1191F007BF6CA /* Mobile_DataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC379A21D1191F007BF6CA /* Mobile_DataUITests.swift */; };
-		39BC37AE21D11A9E007BF6CA /* Fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37A921D11A9D007BF6CA /* Fields.swift */; };
-		39BC37AF21D11A9E007BF6CA /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37AA21D11A9D007BF6CA /* Records.swift */; };
-		39BC37B021D11A9E007BF6CA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37AB21D11A9D007BF6CA /* Result.swift */; };
-		39BC37B121D11A9E007BF6CA /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37AC21D11A9D007BF6CA /* ResponseBase.swift */; };
-		39BC37B221D11A9E007BF6CA /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37AD21D11A9E007BF6CA /* Links.swift */; };
 		39BC37B521D11D42007BF6CA /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37B421D11D42007BF6CA /* RequestManager.swift */; };
 		39BC37B721D1205D007BF6CA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37B621D1205D007BF6CA /* APIManager.swift */; };
 		39BC37BA21D1218B007BF6CA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37B921D1218B007BF6CA /* BaseViewModel.swift */; };
@@ -33,6 +28,12 @@
 		39BC37BE21D122D9007BF6CA /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37BD21D122D9007BF6CA /* SecondViewModel.swift */; };
 		39F696C521D142010045325D /* MobileDataYearlyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F696C421D142010045325D /* MobileDataYearlyCell.swift */; };
 		39F696C721D1425A0045325D /* MobileDataYearlyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39F696C621D1425A0045325D /* MobileDataYearlyCell.xib */; };
+		39F696CE21D14D990045325D /* Fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F696C921D14D990045325D /* Fields.swift */; };
+		39F696CF21D14D990045325D /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F696CA21D14D990045325D /* Links.swift */; };
+		39F696D021D14D990045325D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F696CB21D14D990045325D /* Result.swift */; };
+		39F696D121D14D990045325D /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F696CC21D14D990045325D /* ResponseBase.swift */; };
+		39F696D221D14D990045325D /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F696CD21D14D990045325D /* Records.swift */; };
+		39F696D421D14DBC0045325D /* YearlyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F696D321D14DBC0045325D /* YearlyModel.swift */; };
 		6C71FC1D62122BC93113B43A /* Pods_Mobile_DataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52FB4E244354199EA897CA1 /* Pods_Mobile_DataTests.framework */; };
 		94C6261AC156EFE54BC09FB5 /* Pods_Mobile_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F01A7CC47AB0357B8157F1E /* Pods_Mobile_Data.framework */; };
 		FEE11E0BC6DAA3F544AEF75A /* Pods_Mobile_DataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48EDEE00FD3106FCEAC6D03 /* Pods_Mobile_DataUITests.framework */; };
@@ -78,11 +79,6 @@
 		39BC379621D1191F007BF6CA /* Mobile DataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile DataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BC379A21D1191F007BF6CA /* Mobile_DataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_DataUITests.swift; sourceTree = "<group>"; };
 		39BC379C21D1191F007BF6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39BC37A921D11A9D007BF6CA /* Fields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fields.swift; sourceTree = "<group>"; };
-		39BC37AA21D11A9D007BF6CA /* Records.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
-		39BC37AB21D11A9D007BF6CA /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		39BC37AC21D11A9D007BF6CA /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
-		39BC37AD21D11A9E007BF6CA /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		39BC37B421D11D42007BF6CA /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		39BC37B621D1205D007BF6CA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		39BC37B921D1218B007BF6CA /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -90,6 +86,12 @@
 		39BC37BD21D122D9007BF6CA /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		39F696C421D142010045325D /* MobileDataYearlyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDataYearlyCell.swift; sourceTree = "<group>"; };
 		39F696C621D1425A0045325D /* MobileDataYearlyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileDataYearlyCell.xib; sourceTree = "<group>"; };
+		39F696C921D14D990045325D /* Fields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fields.swift; sourceTree = "<group>"; };
+		39F696CA21D14D990045325D /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		39F696CB21D14D990045325D /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		39F696CC21D14D990045325D /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
+		39F696CD21D14D990045325D /* Records.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
+		39F696D321D14DBC0045325D /* YearlyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyModel.swift; sourceTree = "<group>"; };
 		4F264672850AC963E472D57D /* Pods-Mobile Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile Data.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile Data/Pods-Mobile Data.debug.xcconfig"; sourceTree = "<group>"; };
 		62BD370A97F5E636A3A6410E /* Pods-Mobile DataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile DataUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile DataUITests/Pods-Mobile DataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6C8093466E46F0BF799FF6D9 /* Pods-Mobile DataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile DataUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile DataUITests/Pods-Mobile DataUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,11 +221,8 @@
 		39BC37A821D11A93007BF6CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				39BC37AD21D11A9E007BF6CA /* Links.swift */,
-				39BC37A921D11A9D007BF6CA /* Fields.swift */,
-				39BC37AC21D11A9D007BF6CA /* ResponseBase.swift */,
-				39BC37AA21D11A9D007BF6CA /* Records.swift */,
-				39BC37AB21D11A9D007BF6CA /* Result.swift */,
+				39F696C821D14D990045325D /* CodableModel */,
+				39F696D321D14DBC0045325D /* YearlyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +244,18 @@
 				39BC37BD21D122D9007BF6CA /* SecondViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		39F696C821D14D990045325D /* CodableModel */ = {
+			isa = PBXGroup;
+			children = (
+				39F696C921D14D990045325D /* Fields.swift */,
+				39F696CA21D14D990045325D /* Links.swift */,
+				39F696CB21D14D990045325D /* Result.swift */,
+				39F696CC21D14D990045325D /* ResponseBase.swift */,
+				39F696CD21D14D990045325D /* Records.swift */,
+			);
+			path = CodableModel;
 			sourceTree = "<group>";
 		};
 		C989544D68A75417E7098797 /* Pods */ = {
@@ -501,24 +512,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39BC37B021D11A9E007BF6CA /* Result.swift in Sources */,
+				39F696D121D14D990045325D /* ResponseBase.swift in Sources */,
+				39F696D421D14DBC0045325D /* YearlyModel.swift in Sources */,
 				39BC37BA21D1218B007BF6CA /* BaseViewModel.swift in Sources */,
 				39BC377D21D1191D007BF6CA /* SecondViewController.swift in Sources */,
 				39225E9221D12BC8005FE0D9 /* BallonMarkerControl.swift in Sources */,
 				39BC37B721D1205D007BF6CA /* APIManager.swift in Sources */,
+				39F696CE21D14D990045325D /* Fields.swift in Sources */,
 				39BC377921D1191D007BF6CA /* AppDelegate.swift in Sources */,
-				39BC37AE21D11A9E007BF6CA /* Fields.swift in Sources */,
+				39F696D021D14D990045325D /* Result.swift in Sources */,
 				39F696C521D142010045325D /* MobileDataYearlyCell.swift in Sources */,
 				39225E8921D12472005FE0D9 /* BaseCollectionCell.swift in Sources */,
 				39225E8E21D12B3D005FE0D9 /* RadarMarkerView.swift in Sources */,
 				39BC37BE21D122D9007BF6CA /* SecondViewModel.swift in Sources */,
-				39BC37AF21D11A9E007BF6CA /* Records.swift in Sources */,
+				39F696D221D14D990045325D /* Records.swift in Sources */,
+				39F696CF21D14D990045325D /* Links.swift in Sources */,
 				39BC37BC21D122B0007BF6CA /* FirstViewModel.swift in Sources */,
 				39225E8C21D12638005FE0D9 /* DataLineChartView.swift in Sources */,
-				39BC37B121D11A9E007BF6CA /* ResponseBase.swift in Sources */,
 				39BC37B521D11D42007BF6CA /* RequestManager.swift in Sources */,
 				39BC377B21D1191D007BF6CA /* FirstViewController.swift in Sources */,
-				39BC37B221D11A9E007BF6CA /* Links.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

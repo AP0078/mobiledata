@@ -42,6 +42,7 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         chartView.pinchZoomEnabled = false
         chartView.xAxis.drawGridLinesEnabled = true
         chartView.xAxis.gridLineDashLengths = [3, 3]
+         chartView.xAxis.gridColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         //RIGHT AXIS
         let rightAxis = chartView.rightAxis
         rightAxis.removeAllLimitLines()
@@ -109,8 +110,6 @@ extension SecondViewController: ViewModelDelegate {
         }
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
-    }
-    func loading(_ loading: Bool) {
     }
 }
 // MARK: axisFormatDelegate

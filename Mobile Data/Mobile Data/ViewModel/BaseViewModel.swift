@@ -9,7 +9,6 @@ import Foundation
 protocol ViewModelDelegate: class {
     func onSuccess()
     func onFailure(error: Error?)
-    func loading(_ loading: Bool)
 }
 class BaseViewModel: NSObject {
     //MARK: Properties

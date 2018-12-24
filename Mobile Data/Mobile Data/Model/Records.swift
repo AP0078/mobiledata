@@ -4,7 +4,6 @@ struct Records: Codable {
 	let quarter: String?
 	let id: Int?
 	enum CodingKeys: String, CodingKey {
-
 		case volume_of_mobile_data = "volume_of_mobile_data"
 		case quarter = "quarter"
 		case id = "_id"

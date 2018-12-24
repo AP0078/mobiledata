@@ -9,16 +9,22 @@
 import Foundation
 class RequestManager: NSObject {
     static let sharedInstance = RequestManager()
+    override init() {
+        let memoryCapacity = 500 * 1024 * 1024
+        let diskCapacity = 500 * 1024 * 1024
+        let cache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: "myDataPath")
+        URLCache.shared = cache
+    }
     static var defaultTimeoutInterval: TimeInterval = 60
     fileprivate func getRequest(_ url: URL, timeoutInterval: TimeInterval = RequestManager.defaultTimeoutInterval) -> NSMutableURLRequest {
-        let theRequest = NSMutableURLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: timeoutInterval)
+        let theRequest = NSMutableURLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: timeoutInterval)
         theRequest.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         theRequest.httpMethod = "GET"
         return theRequest
     }
     fileprivate func session(_ url: URL) -> URLSession {
         let config = URLSessionConfiguration.default
-        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.requestCachePolicy = .useProtocolCachePolicy
         config.urlCache = nil
         var session = URLSession(configuration: config, delegate: nil, delegateQueue: nil)
         if let urlScheme = url.scheme {
@@ -32,20 +38,34 @@ class RequestManager: NSObject {
              completion: @escaping (Bool, [AnyHashable: Any]?, NSError?) -> Void ) {
         if let url = URL(string: urlString) {
             let session = self.session(url)
-            session.dataTask(with: self.getRequest(url) as URLRequest,
-                             completionHandler: {(data, response, error) in
-                                if data != nil {
-                                    if let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [AnyHashable: Any] {
-                                        if let response = response as? HTTPURLResponse, 200...299 ~= response.statusCode {
-                                              completion(true, json, nil)
-                                        } else {
-                                            completion(false, json, NSError(domain: "error", code: 3, userInfo: ["message": "Response error"]))
-                                        }
-                                    }
+            let cache = URLCache.shared
+            let request = self.getRequest(url) as URLRequest
+            if let data = cache.cachedResponse(for: request)?.data {
+                if let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [AnyHashable: Any] {
+                    completion(true, json, nil)
+                } else {
+                    completion(false, nil, NSError(domain: "error", code: 3, userInfo: ["message": "Response error"]))
+                }
+            } else {
+                session.dataTask(with: request, completionHandler: { (data, response, error) in
+                    DispatchQueue.main.async {
+                        if data != nil {
+                            if let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [AnyHashable: Any] {
+                                if let response = response as? HTTPURLResponse, 200...299 ~= response.statusCode {
+                                    let cachedData = CachedURLResponse(response: response, data: data!)
+                                    cache.storeCachedResponse(cachedData, for: request)
+                                    completion(true, json, nil)
                                 } else {
-                                    completion(false, nil, NSError(domain: "error", code: 2, userInfo: ["message": "Response data is null"]))
+                                    completion(false, json, NSError(domain: "error", code: 3, userInfo: ["message": "Response error"]))
                                 }
+                            }
+                        } else {
+                            completion(false, nil, NSError(domain: "error", code: 2, userInfo: ["message": "Response data is null"]))
+                        }
+                    }
             }).resume()
+            }
+           
         } else {
             completion(false, nil, NSError(domain: "error", code: 1, userInfo: ["message": "Response error"]))
         }

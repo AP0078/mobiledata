@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.2.0):
+    - Charts/Core (= 3.2.0)
+  - Charts/Core (3.2.0)
+  - SnapKit (4.0.1)
+
+DEPENDENCIES:
+  - Charts
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Charts: 680c8328bd5e90cb14f67e00d2176f3113d19141
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+
+PODFILE CHECKSUM: 194ce193f70d66d0e3acb854b24748e9987b2aac
+
+COCOAPODS: 1.5.3

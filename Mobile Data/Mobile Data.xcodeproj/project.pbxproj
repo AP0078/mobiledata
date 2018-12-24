@@ -15,6 +15,11 @@
 		39BC378521D1191E007BF6CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BC378321D1191E007BF6CA /* LaunchScreen.storyboard */; };
 		39BC379021D1191F007BF6CA /* Mobile_DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC378F21D1191F007BF6CA /* Mobile_DataTests.swift */; };
 		39BC379B21D1191F007BF6CA /* Mobile_DataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC379A21D1191F007BF6CA /* Mobile_DataUITests.swift */; };
+		39BC37AE21D11A9E007BF6CA /* Fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37A921D11A9D007BF6CA /* Fields.swift */; };
+		39BC37AF21D11A9E007BF6CA /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37AA21D11A9D007BF6CA /* Records.swift */; };
+		39BC37B021D11A9E007BF6CA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37AB21D11A9D007BF6CA /* Result.swift */; };
+		39BC37B121D11A9E007BF6CA /* ResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37AC21D11A9D007BF6CA /* ResponseBase.swift */; };
+		39BC37B221D11A9E007BF6CA /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BC37AD21D11A9E007BF6CA /* Links.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		39BC379621D1191F007BF6CA /* Mobile DataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile DataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BC379A21D1191F007BF6CA /* Mobile_DataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_DataUITests.swift; sourceTree = "<group>"; };
 		39BC379C21D1191F007BF6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BC37A921D11A9D007BF6CA /* Fields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fields.swift; sourceTree = "<group>"; };
+		39BC37AA21D11A9D007BF6CA /* Records.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
+		39BC37AB21D11A9D007BF6CA /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		39BC37AC21D11A9D007BF6CA /* ResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseBase.swift; sourceTree = "<group>"; };
+		39BC37AD21D11A9E007BF6CA /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		39BC377721D1191D007BF6CA /* Mobile Data */ = {
 			isa = PBXGroup;
 			children = (
+				39BC37A821D11A93007BF6CA /* Model */,
 				39BC377821D1191D007BF6CA /* AppDelegate.swift */,
 				39BC377A21D1191D007BF6CA /* FirstViewController.swift */,
 				39BC377C21D1191D007BF6CA /* SecondViewController.swift */,
@@ -126,6 +137,18 @@
 				39BC379C21D1191F007BF6CA /* Info.plist */,
 			);
 			path = "Mobile DataUITests";
+			sourceTree = "<group>";
+		};
+		39BC37A821D11A93007BF6CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39BC37AD21D11A9E007BF6CA /* Links.swift */,
+				39BC37A921D11A9D007BF6CA /* Fields.swift */,
+				39BC37AC21D11A9D007BF6CA /* ResponseBase.swift */,
+				39BC37AA21D11A9D007BF6CA /* Records.swift */,
+				39BC37AB21D11A9D007BF6CA /* Result.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BC37B021D11A9E007BF6CA /* Result.swift in Sources */,
 				39BC377D21D1191D007BF6CA /* SecondViewController.swift in Sources */,
 				39BC377921D1191D007BF6CA /* AppDelegate.swift in Sources */,
+				39BC37AE21D11A9E007BF6CA /* Fields.swift in Sources */,
+				39BC37AF21D11A9E007BF6CA /* Records.swift in Sources */,
+				39BC37B121D11A9E007BF6CA /* ResponseBase.swift in Sources */,
 				39BC377B21D1191D007BF6CA /* FirstViewController.swift in Sources */,
+				39BC37B221D11A9E007BF6CA /* Links.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

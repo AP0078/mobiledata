@@ -13,8 +13,13 @@ protocol ViewModelDelegate: class {
 class BaseViewModel: NSObject {
     //MARK: Properties
     weak var delegate: ViewModelDelegate?
+    var unitTestcompletion: ((Bool, Any?) -> Void)?
     init(_ delegate: ViewModelDelegate? = nil) {
         super.init()
         self.delegate = delegate
+    }
+    func unitTestpreSetup(closure: @escaping ((Bool, Any?) -> Void)) {
+        //MARK: Load webview
+        self.unitTestcompletion = closure
     }
 }

@@ -6,7 +6,6 @@ target 'Mobile Data' do
   use_frameworks!
 
   # Pods for Mobile Data
-  pod 'SnapKit'
   pod 'Charts'
   target 'Mobile DataTests' do
     inherit! :search_paths

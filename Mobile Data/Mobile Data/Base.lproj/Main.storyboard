@@ -114,7 +114,7 @@
         <!--List-->
         <scene sceneID="TFj-Fg-iBb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lVb-Ol-PAE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FirstNavViewController" automaticallyAdjustsScrollViewInsets="NO" id="lVb-Ol-PAE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="sI6-nY-NVg">

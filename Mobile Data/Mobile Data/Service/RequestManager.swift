@@ -8,7 +8,6 @@
 
 import Foundation
 class RequestManager: NSObject {
-    static let sharedInstance = RequestManager()
     override init() {
         let memoryCapacity = 500 * 1024 * 1024
         let diskCapacity = 500 * 1024 * 1024

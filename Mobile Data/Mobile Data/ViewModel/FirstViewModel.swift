@@ -10,7 +10,7 @@ class FirstViewModel: BaseViewModel {
     let chartDataPath: String = "/api/action/datastore_search?resource_id=a807b7ab-6cad-4aa6-87d0-e283a7353a0f&limit=56"
     var yearlyRecords: [YearlyModel] = []
     func loadChartData() {
-        let service = RequestManager.sharedInstance
+        let service = RequestManager()
         service.get(urlString: APIManager.urlString(path: chartDataPath)) { [unowned self] (success, data, error) in
             if success, let responseData = data {
                 if let jsonData = try? JSONSerialization.data( withJSONObject: responseData, options: .prettyPrinted) {
@@ -18,12 +18,18 @@ class FirstViewModel: BaseViewModel {
                         if let records = responseModel.result?.records {
                             self.yearlyRecords = self.handleData(records: records)
                             self.delegate?.onSuccess()
+                            if let closure = self.unitTestcompletion {
+                                closure(success, self.yearlyRecords)
+                            }
                             return
                         }
                     }
                 }
             } else {
                 self.delegate?.onFailure(error: error)
+                if let closure = self.unitTestcompletion {
+                    closure(success, nil)
+                }
             }
         }
     }

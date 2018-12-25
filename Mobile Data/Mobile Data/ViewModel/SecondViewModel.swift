@@ -11,7 +11,7 @@ class SecondViewModel: BaseViewModel {
     var records: [Records] = []
     
     func loadChartData() {
-        let service = RequestManager.sharedInstance
+        let service = RequestManager()
         service.get(urlString: APIManager.urlString(path: chartDataPath)) { [unowned self] (success, data, error) in
             if success, let responseData = data {
                 if let jsonData = try? JSONSerialization.data( withJSONObject: responseData, options: .prettyPrinted) {
@@ -19,12 +19,18 @@ class SecondViewModel: BaseViewModel {
                         if let records = responseModel.result?.records {
                             self.records = records
                             self.delegate?.onSuccess()
+                            if let closure = self.unitTestcompletion {
+                                closure(success, self.records)
+                            }
                             return
                         }
                     }
                 }
             } else {
                 self.delegate?.onFailure(error: error)
+                if let closure = self.unitTestcompletion {
+                    closure(success, nil)
+                }
             }
         }
     }

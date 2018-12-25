@@ -15,11 +15,11 @@ Mobile Data is an application to display the amount the of data sent over Singap
 
 ## Installation
 
-To run the Mobile Data project, clone the repo, and run `pod install` in /mobiledata-master/Mobile Data/  first
+To run the Mobile Data project, clone the repo, and run `pod install` in `/mobiledata-master/Mobile Data/`    first
 
 ## Usage
 
-cd  /mobiledata-master/Mobile Data/
+`cd  /mobiledata-master/Mobile Data/ `
 then
 run `pod install` 
 It will produce `Mobile Data.xcworkspace` open it in Xcode
